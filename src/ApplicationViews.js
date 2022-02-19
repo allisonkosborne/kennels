@@ -8,11 +8,12 @@ import { EmployeeCard } from "./components/employee/EmployeeCard"
 import { AnimalDetail } from "./components/animal/AnimalDetail"
 import { AnimalForm } from './components/animal/AnimalForm'
 import { LocationForm } from './components/location/LocationForm'
-import { OwnerForm } from './components/customer/OwnerForm'
+import { CustomerForm } from './components/customer/CustomerForm'
 import { EmployeeForm } from './components/employee/EmployeeForm'
 import { Login } from './components/auth/Login'
 import { Register } from './components/auth/Register'
 import { AnimalEditForm } from './components/animal/AnimalEditForm'
+
 
 
 //Where ROUTES are KEPT
@@ -87,27 +88,35 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
                     <EmployeeCard />
                 </PrivateRoute>
                 } />
-
+                {/* Animals-create route path is associated with Kennels API */}
                 <Route path="/animals/create" element={
                 <PrivateRoute>
                     <AnimalForm />
                 </PrivateRoute>
                 } />
 
-                <Route path="/animals/:animalId/edit" element={
+                <Route path="/customers/create" element={
                 <PrivateRoute>
-                    <AnimalEditForm />
+                    <CustomerForm />
                 </PrivateRoute>
                 } />
 
+                {/* <Route path="/animals/:animalId/edit" element={
+                <PrivateRoute>
+                    <AnimalEditForm />
+                </PrivateRoute>
+                } /> */}
 
-                <Route path="/location/create" element={<LocationForm />} />
 
-             
-                <Route path="/owner/create" element={<OwnerForm />} />
+                {/* <Route path="/location/create" element=
+               
+                {<LocationForm />} />
+
 
                 
-                <Route path="/employee/create" element={<EmployeeForm />} />
+                <Route path="/employee/create" element=
+                
+                {<EmployeeForm />} /> */}
 
 
 

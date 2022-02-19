@@ -13,7 +13,8 @@ export const Home = () => {
 
   useEffect(() => {
     refreshSpotlightAnimal();
-  }, []);
+  }, []); //renders when page loads - get this on the screen; if you click reload, nothign happens because of the array; 
+
 
   return (
     <>
@@ -28,6 +29,7 @@ export const Home = () => {
       {
         spotlightId && <AnimalSpotlight animalId={spotlightId} /> //a type of conidtional rendering; if there's a spotligtht ID, then render spotlight ID
       } 
+    
     </>
   );
 };
