@@ -9,7 +9,7 @@ export const AnimalSpotlight = ({animalId}) => { //props
     getAnimalById(animalId).then(animal => {
       setAnimal(animal);
     });
-  }, [animalId]); //getting animal by ID that comes from 
+  }, [animalId]); //getting animal by ID that comes from - helps the reload button do it's thing multiple times
 
   return (
     <div className="animal-spotlight">
